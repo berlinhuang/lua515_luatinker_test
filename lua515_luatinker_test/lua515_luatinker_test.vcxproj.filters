@@ -39,6 +39,21 @@
     <ClInclude Include="..\lua_thinker\lualib.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="..\lua_thinker\sample1.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lua_thinker\sample2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lua_thinker\sample3.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lua_thinker\sample4.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lua_thinker\sample5.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
