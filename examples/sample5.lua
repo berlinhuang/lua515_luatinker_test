@@ -1,3 +1,7 @@
+-- C++设置Lua环境错误处理
+-- 用Lua_Tinker从C++环境往Lua环境注入错误处理函数，以_ALERT为函数标识
+
+
 -- 抛胶飘 窃荐
 function test_error()
 	

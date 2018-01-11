@@ -19,8 +19,7 @@ print(temp:is_base())
 print(temp:is_test())
 
 
-
--- 绢栋茄 按眉狼 metatable阑 烹秦 殿废等 努贰胶客 弊 窃荐甸阑 混旗焊绰 窃荐
+-- 对象的基本信息
 -------------------------------------------------------------------------------
 function objinfo(obj)
 	local meta = getmetatable(obj)
@@ -37,12 +36,13 @@ function metainfo(meta)
 		if name ~= nil then
 			metainfo(meta["__parent"])
 			print("<"..name..">")
+            -- 遍历对象的各个属性
 			for key,value in pairs(meta) do 
 				if not string.find(key, "__..") then 
 					if type(value) == "function" then
-						print("\t[f] "..name..":"..key.."()") 
+						print("\t[f] "..name..":"..key.."()") -- [f] test:set()
 					elseif type(value) == "userdata" then
-						print("\t[v] "..name..":"..key)
+						print("\t[v] "..name..":"..key) -- [v] test:_test
 					end
 				end
 			end
@@ -51,20 +51,20 @@ function metainfo(meta)
 end
 -------------------------------------------------------------------------------
 
--- Lua 俊辑 按眉绰 userdata肺 牢侥等促.
+-- Lua 打印对象的地址？？
 print("g_test	-> ", g_test)
 print("temp	-> ", temp)
 print("a	-> ", a)
 
--- C++ 俊辑 殿废茄 g_test 狼 按眉 沥焊甫 混旗夯促.
+-- C++ 注册的全局对象g_test
 print("objinfo(g_test)")
 objinfo(g_test)
 
--- constructor 甫 烹秦 积己茄 temp 按眉 沥焊甫 混旗夯促.
+-- Lua创建的对象
 print("objinfo(temp)")
 objinfo(temp)
 
--- 殿废窍瘤 臼篮 A 备炼眉 屈狼 a 按眉 沥焊甫 混旗夯促.
+-- 未注册的对象
 print("objinfo(a)")
 objinfo(a)
 

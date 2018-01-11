@@ -1,24 +1,25 @@
--- 如何在C++中创建Lua环境的table，并被C++和Lua环境操作
-
-
--- C++ 注册的haha表
--- haha = { value =1, inside = { value = 2 } }
+-- 傈开 haha 抛捞喉阑 犬牢茄促.
 print(haha)
 
+-- 傈开 haha.value甫 免仿茄促.
 print(haha.value)
+
+-- 傈开 haha.inside 抛捞喉阑 犬牢茄促.
 print(haha.inside)
+
+-- 傈开 haha.inside.value甫 免仿茄促.
 print(haha.inside.value)
 
--- C++会获取 haha.test 注册
+-- haha.test 蔼阑 持绰促.
 haha.test = "input from lua"
 
--- C++ 调用print_table 传入 temp = { name = "local table !!" }
+-- LuaTinker 啊 涝仿栏肺 抛捞喉阑 逞变促.
 function print_table(arg)
 	print("arg = ", arg)
 	print("arg.name = ", arg.name)
 end
 
--- C++ 调用return_table  
+-- LuaTinker 俊霸 抛捞喉阑 逞变促.
 function return_table(arg)
 	local ret = {}
 	ret.name = arg

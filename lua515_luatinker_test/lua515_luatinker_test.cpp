@@ -10,7 +10,7 @@ using namespace std;
 #include "sample5.h"
 int _tmain(int argc, _TCHAR* argv[])
 {
-	sample1();
+	sample5();
 	return 0;
 }
 

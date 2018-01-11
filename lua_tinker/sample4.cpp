@@ -49,7 +49,7 @@ void sample4()
 
 	lua_tinker::call<void>(L, "print_table", temp);//执行sample4中的print_table函数
 
-	//执行simple4.lua中的取值函数arg= "give me a table !!"， ret = { name = "give me a table !!"}
+	//执行simple4.lua中的取值函数return_table 传入 arg= "give me a table !!"， 返回lua决定的table   ret = { name = "give me a table !!"}
 	lua_tinker::table ret = lua_tinker::call<lua_tinker::table>(L, "return_table", "give me a table !!");
 	printf("ret.name =\t%s\n", ret.get<const char*>("name"));
 
