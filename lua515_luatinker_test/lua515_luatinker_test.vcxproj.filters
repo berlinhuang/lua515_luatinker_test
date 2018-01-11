@@ -24,34 +24,34 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\lua_thinker\lauxlib.h">
+    <ClInclude Include="..\lua_tinker\lauxlib.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\lua_thinker\lua.h">
+    <ClInclude Include="..\lua_tinker\lua.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\lua_thinker\lua_tinker.h">
+    <ClInclude Include="..\lua_tinker\lua_tinker.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\lua_thinker\luaconf.h">
+    <ClInclude Include="..\lua_tinker\luaconf.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\lua_thinker\lualib.h">
+    <ClInclude Include="..\lua_tinker\lualib.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\lua_thinker\sample1.h">
+    <ClInclude Include="..\lua_tinker\sample1.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\lua_thinker\sample2.h">
+    <ClInclude Include="..\lua_tinker\sample2.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\lua_thinker\sample3.h">
+    <ClInclude Include="..\lua_tinker\sample3.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\lua_thinker\sample4.h">
+    <ClInclude Include="..\lua_tinker\sample4.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\lua_thinker\sample5.h">
+    <ClInclude Include="..\lua_tinker\sample5.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -62,39 +62,39 @@
     <ClCompile Include="lua515_luatinker_test.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\lua_thinker\lua_tinker.cpp">
+    <ClCompile Include="..\lua_tinker\lua_tinker.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\lua_thinker\sample1.cpp">
+    <ClCompile Include="..\lua_tinker\sample1.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\lua_thinker\sample2.cpp">
+    <ClCompile Include="..\lua_tinker\sample2.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\lua_thinker\sample3.cpp">
+    <ClCompile Include="..\lua_tinker\sample3.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\lua_thinker\sample4.cpp">
+    <ClCompile Include="..\lua_tinker\sample4.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\lua_thinker\sample5.cpp">
+    <ClCompile Include="..\lua_tinker\sample5.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\lua_thinker\sample1.lua">
+    <None Include="sample1.lua">
       <Filter>源文件</Filter>
     </None>
-    <None Include="..\lua_thinker\sample2.lua">
+    <None Include="sample2.lua">
       <Filter>源文件</Filter>
     </None>
-    <None Include="..\lua_thinker\sample3.lua">
+    <None Include="sample3.lua">
       <Filter>源文件</Filter>
     </None>
-    <None Include="..\lua_thinker\sample4.lua">
+    <None Include="sample4.lua">
       <Filter>源文件</Filter>
     </None>
-    <None Include="..\lua_thinker\sample5.lua">
+    <None Include="sample5.lua">
       <Filter>源文件</Filter>
     </None>
   </ItemGroup>

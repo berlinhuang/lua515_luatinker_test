@@ -53,14 +53,14 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>D:\visual studio 2013\Projects\lua515_luatinker_test\lua-5.1.5\src;D:\visual studio 2013\Projects\lua515_luatinker_test\lua_thinker;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\github\lua515_luatinker_test\lua-5.1.5\src;E:\github\lua515_luatinker_test\lua_tinker;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>/D _CRT_SECURE_NO_WARNINGS %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>lua5.15.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>D:\visual studio 2013\Projects\lua515_luatinker_test\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>E:\github\lua515_luatinker_test\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -84,26 +84,26 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\lua_thinker\lauxlib.h" />
-    <ClInclude Include="..\lua_thinker\lua.h" />
-    <ClInclude Include="..\lua_thinker\luaconf.h" />
-    <ClInclude Include="..\lua_thinker\lualib.h" />
-    <ClInclude Include="..\lua_thinker\lua_tinker.h" />
-    <ClInclude Include="..\lua_thinker\sample1.h" />
-    <ClInclude Include="..\lua_thinker\sample2.h" />
-    <ClInclude Include="..\lua_thinker\sample3.h" />
-    <ClInclude Include="..\lua_thinker\sample4.h" />
-    <ClInclude Include="..\lua_thinker\sample5.h" />
+    <ClInclude Include="..\lua_tinker\lauxlib.h" />
+    <ClInclude Include="..\lua_tinker\lua.h" />
+    <ClInclude Include="..\lua_tinker\luaconf.h" />
+    <ClInclude Include="..\lua_tinker\lualib.h" />
+    <ClInclude Include="..\lua_tinker\lua_tinker.h" />
+    <ClInclude Include="..\lua_tinker\sample1.h" />
+    <ClInclude Include="..\lua_tinker\sample2.h" />
+    <ClInclude Include="..\lua_tinker\sample3.h" />
+    <ClInclude Include="..\lua_tinker\sample4.h" />
+    <ClInclude Include="..\lua_tinker\sample5.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\lua_thinker\lua_tinker.cpp" />
-    <ClCompile Include="..\lua_thinker\sample1.cpp" />
-    <ClCompile Include="..\lua_thinker\sample2.cpp" />
-    <ClCompile Include="..\lua_thinker\sample3.cpp" />
-    <ClCompile Include="..\lua_thinker\sample4.cpp" />
-    <ClCompile Include="..\lua_thinker\sample5.cpp" />
+    <ClCompile Include="..\lua_tinker\lua_tinker.cpp" />
+    <ClCompile Include="..\lua_tinker\sample1.cpp" />
+    <ClCompile Include="..\lua_tinker\sample2.cpp" />
+    <ClCompile Include="..\lua_tinker\sample3.cpp" />
+    <ClCompile Include="..\lua_tinker\sample4.cpp" />
+    <ClCompile Include="..\lua_tinker\sample5.cpp" />
     <ClCompile Include="lua515_luatinker_test.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -111,11 +111,11 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\lua_thinker\sample1.lua" />
-    <None Include="..\lua_thinker\sample2.lua" />
-    <None Include="..\lua_thinker\sample3.lua" />
-    <None Include="..\lua_thinker\sample4.lua" />
-    <None Include="..\lua_thinker\sample5.lua" />
+    <None Include="sample1.lua" />
+    <None Include="sample2.lua" />
+    <None Include="sample3.lua" />
+    <None Include="sample4.lua" />
+    <None Include="sample5.lua" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
