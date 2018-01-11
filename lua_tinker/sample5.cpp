@@ -2,11 +2,11 @@
 //
 #include "stdafx.h"
 #include "sample5.h"
-extern "C" 
+extern "C"
 {
-	#include "lua.h"
-	#include "lualib.h"
-	#include "lauxlib.h"
+#include "lua.h"
+#include "lualib.h"
+#include "lauxlib.h"
 };
 
 #include "lua_tinker.h"
@@ -15,55 +15,51 @@ void show_error(const char* error)
 {
 	printf("_ALERT -> %s\n", error);
 }
+//µ÷ÓÃ·¢Éú´íÎóµÄÊ±ºò »áÒ»²ã²ã·µ»Ø£¬·µ»ØµÄ²ÎÊı´«µİ¸øshow_error
 
 void sample5()
 {
-	// Lua ¸¦ ÃÊ±âÈ­ ÇÑ´Ù.
+
 	lua_State* L = lua_open();
 
-	// Lua ±âº» ÇÔ¼öµéÀ» ·ÎµåÇÑ´Ù.- print() »ç¿ë
+
 	luaopen_base(L);
 
 
-	// lua_State* °¡ °®°íÀÖ´Â ÇöÀçÀÇ ½ºÅÃÀ» º¸¿©ÁØ´Ù.
-	printf("%s\n","-------------------------- current stack");
-	lua_tinker::enum_stack(L);
 
-	// ½ºÅÃ¿¡ 1À» ¹Ğ¾î³Ö´Â´Ù.
+	printf("%s\n", "-------------------------- current stack");
+	lua_tinker::enum_stack(L);//ÓÃ»§Ã¶¾ÙluaÕ»ÖĞµÄÄÚÈİ
+
+
 	lua_pushnumber(L, 1);
 
-	// ÇöÀç ½ºÅÃÀÇ ³»¿ëÀ» ´Ù½Ã Ãâ·ÂÇÑ´Ù.
-	printf("%s\n","-------------------------- stack after push '1'");
+
+	printf("%s\n", "-------------------------- stack after push '1'");
 	lua_tinker::enum_stack(L);
 
 
-	// sample5.lua ÆÄÀÏÀ» ·Îµå/½ÇÇàÇÑ´Ù.
+
 	lua_tinker::dofile(L, "sample5.lua");
 
-	// test_error() ÇÔ¼ö¸¦ È£ÃâÇÑ´Ù.
-	// test_error() ´Â ½ÇÇàÁß test_error_3() È£ÃâÀ» ½ÃµµÇÏ´Ù ¿¡·¯¸¦ ¹ß»ı½ÃÅ²´Ù.
-	// ÇÔ¼ö È£ÃâÁß ¹ß»ıÇÑ ¿¡·¯´Â printf()¸¦ ÅëÇØ¼­ Ãâ·ÂµÈ´Ù.
-	printf("%s\n","-------------------------- calling test_error()");
+
+	printf("%s\n", "-------------------------- calling test_error()");
 	lua_tinker::call<void>(L, "test_error");
 
-	// test_error_3()´Â Á¸ÀçÇÏÁö ¾Ê´Â ÇÔ¼öÀÌ´Ù. È£Ãâ ÀÚÃ¼°¡ ½ÇÆĞÇÑ´Ù.
-	printf("%s\n","-------------------------- calling test_error_3()");
+
+	printf("%s\n", "-------------------------- calling test_error_3()");
 	lua_tinker::call<void>(L, "test_error_3");
 
-	// printf() ´ë½Å À¯Àú°¡ Á¦°øÇÏ´Â ¿¡·¯ Ãâ·Â ·çÆ¾À» »ç¿ëÇÒ ¼ö ÀÖ´Ù.
-	// ÀÌ ¿¡·¯Ã³¸® ÇÔ¼ö´Â1°³ÀÇ ·ç¾Æ ¹®ÀÚ¿­·Î ¹ß»ıÇÑ ¿¡·¯¸¦ Àü´ŞÇÏ°Ô µÈ´Ù.
-	// C++ ¿¡¼­ µî·ÏÇÒ °æ¿ì void function(const char*) ÇüÅÂ°¡ ÀûÇÕÇÏ´Ù.
-	lua_tinker::def(L, "_ALERT", show_error);
+	//×¢²áC++º¯Êıshow_error , luaÎÄ¼şÖĞ¿ÉÒÔÓÃ_ALERTÀ´µ÷ÓÃ
+	lua_tinker::def(L, "_ALERT", show_error);//ĞéÄâ»úhandle | LuaÖĞµÄº¯ÊıÃû | C++ÖĞº¯ÊıÖ¸Õë
 
-	lua_tinker::call<void>(L, "_ALERT", "test !!!");
-
-	// test_error() ÇÔ¼ö¸¦ È£ÃâÇÑ´Ù.
-	// ÇÔ¼ö È£ÃâÁß ¹ß»ıÇÑ ¿¡·¯´Â Lua¿¡ µî·ÏµÈ _ALERT()¸¦ ÅëÇØ¼­ Ãâ·ÂµÈ´Ù.
-	printf("%s\n","-------------------------- calling test_error()");
-	lua_tinker::call<void>(L, "test_error");
+	lua_tinker::call<void>(L, "_ALERT", "test !!!");//µÈÓÚÔÚluaÎÄ¼şÖĞµ÷ÓÃ£º_ALERT( "test !!!" )
 
 
-	// ÇÁ·Î±×·¥ Á¾·á
+	printf("%s\n", "-------------------------- calling test_error()");
+	lua_tinker::call<void>(L, "test_error");//Ä£ÄâluaÎÄ¼şÖĞµ÷ÓÃ
+
+
+
 	lua_close(L);
 
 	system("pause");
