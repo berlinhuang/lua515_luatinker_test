@@ -39,7 +39,7 @@ void sample5()
 
 
 
-	lua_tinker::dofile(L, "sample5.lua");
+	lua_tinker::dofile(L, "./../examples/sample5.lua");
 
 
 	printf("%s\n", "-------------------------- calling test_error()");

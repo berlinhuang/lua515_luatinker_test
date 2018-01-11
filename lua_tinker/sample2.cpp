@@ -19,11 +19,11 @@ void sample2()
 
 	luaopen_base(L);
 
-	lua_tinker::set(L, "cpp_int", cpp_int);// 注册全局变量
+	lua_tinker::set(L, "cpp_int", cpp_int); //往Lua环境导入一个全局变量cpp_int,赋值100
 
-	lua_tinker::dofile(L, "sample2.lua");
+	lua_tinker::dofile(L, "./../examples/sample2.lua"); //编译并执行lua脚本 
 
-	int lua_int = lua_tinker::get<int>(L, "lua_int");// 获取全局变量
+	int lua_int = lua_tinker::get<int>(L, "lua_int"); //获取Lua环境中的全局变量lua_int  
 
 	printf("lua_int = %d\n", lua_int);
 

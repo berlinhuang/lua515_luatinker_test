@@ -22,7 +22,6 @@ struct A
 struct base
 {
 	base() {}//构造
-
 	const char* is_base(){ return "this is base"; }
 };
 
@@ -31,15 +30,12 @@ class test : public base
 public:
 	test(int val) : _test(val) {}//构造 给成员变量赋值 _test = val
 	~test() {}//析构 
-
 	const char* is_test(){ return "this is test"; }
-
 	void ret_void() {}
 	int ret_int()				{ return _test; }// get _test
 	int ret_mul(int m) const	{ return _test * m; }// get _test*m
 	A get()						{ return A(_test); }// 返回实例化对象A
 	void set(A a)				{ _test = a.value; }// set _test = A.value
-
 	int _test;
 };
 
@@ -75,7 +71,7 @@ void sample3()
 	lua_tinker::set(L, "g_test", &g_test);//注册全局变量
 
 
-	lua_tinker::dofile(L, "sample3.lua");
+	lua_tinker::dofile(L, "./../examples/sample3.lua");
 
 
 	lua_close(L);

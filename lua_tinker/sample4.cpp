@@ -34,7 +34,7 @@ void sample4()
 	inside.set("value", 2);//给表变量赋值 haha = { value = 1, inside = { value =2 } }
 
 
-	lua_tinker::dofile(L, "sample4.lua");
+	lua_tinker::dofile(L, "./../examples/sample4.lua");
 
 
 	const char* test = haha.get<const char*>("test");//获取haha.test 该值在sample4.lua中已赋

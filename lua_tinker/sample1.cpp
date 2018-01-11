@@ -13,6 +13,7 @@ int cpp_func(int arg1, int arg2)
 	return arg1 + arg2;
 }
 
+
 void sample1()
 {
 	// 初始化Lua
@@ -41,7 +42,7 @@ void sample1()
 	*/
 
 	// sample1.lua 加载lua文件
-	lua_tinker::dofile(L, "sample1.lua");
+	lua_tinker::dofile(L, "./../examples/sample1.lua");
 
 	// sample1.lua 调用lua中的function lua_func.
 	int result = lua_tinker::call<int>(L, "lua_func", 3, 4);

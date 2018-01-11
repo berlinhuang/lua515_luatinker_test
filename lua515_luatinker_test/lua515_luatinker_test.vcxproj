@@ -111,11 +111,11 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="sample1.lua" />
-    <None Include="sample2.lua" />
-    <None Include="sample3.lua" />
-    <None Include="sample4.lua" />
-    <None Include="sample5.lua" />
+    <None Include="..\examples\sample1.lua" />
+    <None Include="..\examples\sample2.lua" />
+    <None Include="..\examples\sample3.lua" />
+    <None Include="..\examples\sample4.lua" />
+    <None Include="..\examples\sample5.lua" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

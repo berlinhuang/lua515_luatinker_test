@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>E439935D-B2A2-46AE-856D-2AA408428F33</ProjectGuid>
+    <!--$guid1$-->
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>
+    </StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="lua515_luatinker_test\" />
+    <Folder Include="lua515_luatinker_test\Debug\" />
+    <Folder Include="lua515_luatinker_test\Debug\lua515_l.A9516E42.tlog\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lua515_luatinker_test\Debug\lua515_l.A9516E42.tlog\cl.command.1.tlog" />
+    <Content Include="lua515_luatinker_test\Debug\lua515_l.A9516E42.tlog\CL.read.1.tlog" />
+    <Content Include="lua515_luatinker_test\Debug\lua515_l.A9516E42.tlog\CL.write.1.tlog" />
+    <Content Include="lua515_luatinker_test\Debug\lua515_l.A9516E42.tlog\link.command.1.tlog" />
+    <Content Include="lua515_luatinker_test\Debug\lua515_l.A9516E42.tlog\link.read.1.tlog" />
+    <Content Include="lua515_luatinker_test\Debug\lua515_l.A9516E42.tlog\link.write.1.tlog" />
+    <Content Include="lua515_luatinker_test\Debug\lua515_l.A9516E42.tlog\lua515_luatinker_test.lastbuildstate" />
+    <Content Include="lua515_luatinker_test\Debug\lua515_luatinker_test.log" />
+    <Content Include="lua515_luatinker_test\Debug\lua515_luatinker_test.obj" />
+    <Content Include="lua515_luatinker_test\Debug\lua515_luatinker_test.pch" />
+    <Content Include="lua515_luatinker_test\Debug\lua_tinker.obj" />
+    <Content Include="lua515_luatinker_test\Debug\sample1.obj" />
+    <Content Include="lua515_luatinker_test\Debug\sample2.obj" />
+    <Content Include="lua515_luatinker_test\Debug\sample3.obj" />
+    <Content Include="lua515_luatinker_test\Debug\sample4.obj" />
+    <Content Include="lua515_luatinker_test\Debug\sample5.obj" />
+    <Content Include="lua515_luatinker_test\Debug\stdafx.obj" />
+    <Content Include="lua515_luatinker_test\Debug\vc120.idb" />
+    <Content Include="lua515_luatinker_test\Debug\vc120.pdb" />
+    <Content Include="lua515_luatinker_test\lua515_luatinker_test.cpp" />
+    <Content Include="lua515_luatinker_test\lua515_luatinker_test.vcxproj" />
+    <Content Include="lua515_luatinker_test\lua515_luatinker_test.vcxproj.filters" />
+    <Content Include="lua515_luatinker_test\lua515_luatinker_test.vcxproj.user" />
+    <Content Include="lua515_luatinker_test\ReadMe.txt" />
+    <Content Include="lua515_luatinker_test\stdafx.cpp" />
+    <Content Include="lua515_luatinker_test\stdafx.h" />
+    <Content Include="lua515_luatinker_test\targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="lua515_luatinker_test\sample1.lua" />
+    <Compile Include="lua515_luatinker_test\sample2.lua" />
+    <Compile Include="lua515_luatinker_test\sample3.lua" />
+    <Compile Include="lua515_luatinker_test\sample4.lua" />
+    <Compile Include="lua515_luatinker_test\sample5.lua" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+</Project>
