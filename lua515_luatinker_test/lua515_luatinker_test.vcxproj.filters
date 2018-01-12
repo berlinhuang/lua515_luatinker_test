@@ -54,6 +54,9 @@
     <ClInclude Include="..\lua_tinker\sample5.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="..\lua_tinker\luaBind.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -78,6 +81,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="..\lua_tinker\sample5.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lua_tinker\luaBind.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

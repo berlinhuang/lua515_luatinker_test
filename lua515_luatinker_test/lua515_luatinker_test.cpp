@@ -8,9 +8,10 @@ using namespace std;
 #include "sample3.h"
 #include "sample4.h"
 #include "sample5.h"
+#include "luaBind.h"
 int _tmain(int argc, _TCHAR* argv[])
 {
-	sample5();
+	RegisterMyFunc();
 	return 0;
 }
 

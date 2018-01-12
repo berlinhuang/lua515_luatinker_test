@@ -59,13 +59,13 @@ void sample3()
 
 	lua_tinker::class_con<test>(L, lua_tinker::constructor<test, int>);//注册构造函数
 
-	lua_tinker::class_def<test>(L, "is_test", &test::is_test);//类方法
+	lua_tinker::class_def<test>(L, "is_test", &test::is_test);//类方法;
 	lua_tinker::class_def<test>(L, "ret_void", &test::ret_void);//类方法
 	lua_tinker::class_def<test>(L, "ret_int", &test::ret_int);//类方法
 	lua_tinker::class_def<test>(L, "ret_mul", &test::ret_mul);//类方法
 	lua_tinker::class_def<test>(L, "get", &test::get);//类方法
 	lua_tinker::class_def<test>(L, "set", &test::set);//类方法
-	lua_tinker::class_mem<test>(L, "_test", &test::_test);//类方法
+	lua_tinker::class_mem<test>(L, "_test", &test::_test);//成员
 
 
 	lua_tinker::set(L, "g_test", &g_test);//注册全局变量

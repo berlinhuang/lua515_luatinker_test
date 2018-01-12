@@ -86,6 +86,7 @@
   <ItemGroup>
     <ClInclude Include="..\lua_tinker\lauxlib.h" />
     <ClInclude Include="..\lua_tinker\lua.h" />
+    <ClInclude Include="..\lua_tinker\luaBind.h" />
     <ClInclude Include="..\lua_tinker\luaconf.h" />
     <ClInclude Include="..\lua_tinker\lualib.h" />
     <ClInclude Include="..\lua_tinker\lua_tinker.h" />
@@ -98,6 +99,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\lua_tinker\luaBind.cpp" />
     <ClCompile Include="..\lua_tinker\lua_tinker.cpp" />
     <ClCompile Include="..\lua_tinker\sample1.cpp" />
     <ClCompile Include="..\lua_tinker\sample2.cpp" />

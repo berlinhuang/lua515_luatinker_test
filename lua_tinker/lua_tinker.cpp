@@ -532,6 +532,14 @@ void lua_tinker::push(lua_State *L, lua_tinker::table ret)
 	lua_pushvalue(L, ret.m_obj->m_index);
 }
 
+//添加一个函数,支持字符串的push
+template<> 
+void lua_tinker::push(lua_State *L, std::string ret )
+{
+	lua_pushstring( L, ret.c_str() );						
+}
+
+
 /*---------------------------------------------------------------------------*/
 /* pop                                                                       */
 /*---------------------------------------------------------------------------*/
