@@ -1,15 +1,13 @@
 #ifndef _LUA_BIND_H_
 #define _LUA_BIND_H_
 
-#include "lua_tinker.h"
-
 extern "C"
 {
 #include "lua.h"
 #include "lualib.h"
 #include "lauxlib.h"
 };
-
+#include "lua_tinker.h"
 
 template< typename T >
 void RegisterMyFunc(lua_State* state, const char* func_name, lua_CFunction f)
@@ -22,9 +20,10 @@ void RegisterMyFunc(lua_State* state, const char* func_name, lua_CFunction f)
 }
 
 
-bool StartLuaScriptEngine(lua_State* L);
 int my_getpoint(lua_State* L);
 bool customLuaLoader(lua_State* L);
+
+void Register();
 
 template<typename Object>
 class LuaClass
@@ -101,6 +100,7 @@ public:
 		return *this;
 	}
 };
+
 
 
 #endif

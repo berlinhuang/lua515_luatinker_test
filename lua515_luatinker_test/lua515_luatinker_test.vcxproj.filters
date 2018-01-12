@@ -54,7 +54,10 @@
     <ClInclude Include="..\lua_tinker\sample5.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\lua_tinker\luaBind.h">
+    <ClInclude Include="..\lua_tinker\lua_bind_sample.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lua_tinker\lua_bind.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -83,7 +86,10 @@
     <ClCompile Include="..\lua_tinker\sample5.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\lua_tinker\luaBind.cpp">
+    <ClCompile Include="..\lua_tinker\lua_bind.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lua_tinker\lua_bind_sample.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -101,6 +107,9 @@
       <Filter>源文件</Filter>
     </None>
     <None Include="..\examples\sample5.lua">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="..\examples\lua_bind_sample.lua">
       <Filter>源文件</Filter>
     </None>
   </ItemGroup>

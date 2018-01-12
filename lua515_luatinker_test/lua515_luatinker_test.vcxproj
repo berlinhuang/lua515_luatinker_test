@@ -86,9 +86,10 @@
   <ItemGroup>
     <ClInclude Include="..\lua_tinker\lauxlib.h" />
     <ClInclude Include="..\lua_tinker\lua.h" />
-    <ClInclude Include="..\lua_tinker\luaBind.h" />
+    <ClInclude Include="..\lua_tinker\lua_bind.h" />
     <ClInclude Include="..\lua_tinker\luaconf.h" />
     <ClInclude Include="..\lua_tinker\lualib.h" />
+    <ClInclude Include="..\lua_tinker\lua_bind_sample.h" />
     <ClInclude Include="..\lua_tinker\lua_tinker.h" />
     <ClInclude Include="..\lua_tinker\sample1.h" />
     <ClInclude Include="..\lua_tinker\sample2.h" />
@@ -99,7 +100,8 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\lua_tinker\luaBind.cpp" />
+    <ClCompile Include="..\lua_tinker\lua_bind.cpp" />
+    <ClCompile Include="..\lua_tinker\lua_bind_sample.cpp" />
     <ClCompile Include="..\lua_tinker\lua_tinker.cpp" />
     <ClCompile Include="..\lua_tinker\sample1.cpp" />
     <ClCompile Include="..\lua_tinker\sample2.cpp" />
@@ -113,6 +115,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\examples\lua_bind_sample.lua" />
     <None Include="..\examples\sample1.lua" />
     <None Include="..\examples\sample2.lua" />
     <None Include="..\examples\sample3.lua" />

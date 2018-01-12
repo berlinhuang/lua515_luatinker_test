@@ -284,7 +284,7 @@ namespace lua_tinker
 	template<>	void push(lua_State *L, long long ret);
 	template<>	void push(lua_State *L, unsigned long long ret);
 	template<>	void push(lua_State *L, table ret);
-	template<> 	void push(lua_State *L, std::string ret);	// 特化push函数
+	//template<> 	void push(lua_State *L, std::string ret);	// 特化push函数
 
 	// pop a value from lua stack
 	template<typename T>

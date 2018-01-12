@@ -8,10 +8,10 @@ using namespace std;
 #include "sample3.h"
 #include "sample4.h"
 #include "sample5.h"
-#include "luaBind.h"
+#include "lua_bind_sample.h"
 int _tmain(int argc, _TCHAR* argv[])
 {
-	RegisterMyFunc();
+	lua_bind_sample();
 	return 0;
 }
 
