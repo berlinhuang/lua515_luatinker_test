@@ -25,7 +25,7 @@ bool customLuaLoader(lua_State* L);
 
 void Register();
 
-template<typename Object>
+template<typename Object, typename ...Arg>
 class LuaClass
 {
 	lua_State*  m_state;
@@ -49,6 +49,14 @@ public:
 		RegisterMyFunc<Object>(m_state, name, func);
 		return *this;
 	}
+	
+	//新增绑定对象成员 &class::mem
+	template<typename BASE, typename VAR>
+	inline LuaClass& mem(const char* name, VAR BASE::*val)
+	{
+		lua_tinker::class_mem<Object>(m_state, name, val);
+		return *this;
+	}
 
 	inline LuaClass& class_add(const char* name)
 	{
@@ -64,6 +72,19 @@ public:
 		}
 
 		return def2(name, my_getpoint);
+	}
+
+	//新增 添加+继承+构造
+	inline LuaClass& create_inh(const char* name)
+	{
+		if (!m_bCreated)
+		{
+			lua_tinker::class_add<Object>(m_state, name);
+			m_bCreated = true;
+		}
+		lua_tinker::class_inh<Object, Arg...>(m_state);//注册类继承关系
+		lua_tinker::class_con<Object>(m_state, lua_tinker::constructor<Object>);
+		return *this;
 	}
 
 	inline LuaClass& create(const char* name)
