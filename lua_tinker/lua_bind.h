@@ -83,7 +83,7 @@ public:
 			m_bCreated = true;
 		}
 		lua_tinker::class_inh<Object, Arg...>(m_state);//×¢²áÀà¼Ì³Ğ¹ØÏµ
-		lua_tinker::class_con<Object>(m_state, lua_tinker::constructor<Object>);
+		lua_tinker::class_con<Object>(m_state, lua_tinker::constructor<Object,int>);
 		return *this;
 	}
 
