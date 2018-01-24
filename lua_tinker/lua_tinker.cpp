@@ -580,15 +580,20 @@ static void invoke_parent(lua_State *L)
 }
 
 /*---------------------------------------------------------------------------*/
+//当脚本中出现 c.a或c[a] 这个词法时，脚本切换到的宿主函数meta_get
+
+//先把 c从栈上拿出它的meta_table来看  有没有对a这个元操作有没有定义过
+//如果没有则用invoke_parent去找c的父类的meta_table 里找对a操作的定义
+//直到找到var_base*这个用来描述成员变量地址偏移，通过var_base::get(L)回传正确的成员变量到lua中
 int lua_tinker::meta_get(lua_State *L)
 {
 	lua_getmetatable(L, 1);
 	lua_pushvalue(L, 2);
 	lua_rawget(L, -2);
 
-	if (lua_isuserdata(L, -1))
+	if (lua_isuserdata(L, -1))//栈顶
 	{
-		user2type<var_base*>::invoke(L, -1)->get(L);
+		user2type<var_base*>::invoke(L, -1)->get(L); //从栈上按索引提取userdata数据到c这边来用的一个接口
 		lua_remove(L, -2);
 	}
 	else if (lua_isnil(L, -1))
@@ -608,10 +613,13 @@ int lua_tinker::meta_get(lua_State *L)
 }
 
 /*---------------------------------------------------------------------------*/
+//在c[a] = b 或 c.a = b赋值操作时切换到的宿主函数meta_set
+//不过他在找不到的a时候会另外一种处理方式，类似stl::map[a]的赋值操作，产生一个对象来接受b的赋值
+//并且这个只会在本层发生不会再劳驾invoke_parent去操作，同是通过var_base::set(L)让成员变量自己去栈上取到新值给自己赋值上
 int lua_tinker::meta_set(lua_State *L)
 {
-	lua_getmetatable(L, 1);
-	lua_pushvalue(L, 2);
+	lua_getmetatable(L, 1); //把给定索引指向的值的元表压入堆栈
+	lua_pushvalue(L, 2); //取得原来栈中的第2个元素
 	lua_rawget(L, -2);
 
 	if (lua_isuserdata(L, -1))
